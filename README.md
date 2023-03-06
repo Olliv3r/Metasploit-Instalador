@@ -6,10 +6,8 @@ mkdir -p $PREFIX/etc/apt/sources.list.d;apt install wget -y;wget https://raw.git
 ```
 
 ### Resolver erro:
-`
-Could not find nokogiri-1.14.1 in any of the sources
-Run `bundle install` to install missing gems.
-`
+`Could not find nokogiri-1.14.1 in any of the sources
+Run 'bundle install' to install missing gems.`
 
 ```
 apt update && apt upgrade -y && cd $PREFIX/opt/metasploit-framework && bundle install

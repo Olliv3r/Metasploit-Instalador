@@ -4,8 +4,9 @@
 
 echo "Instalando metasploit..."
 apt update && apt install wget -y
-mkdir -p $PREFIX/etc/apt/sources.list.d
-wget https://raw.githubusercontent.com/ivam3/termux-packages/gh-pages/ivam3-termux-packages.list -O $PREFIX/etc/apt/sources.list.d/ivam3-termux-packages.list
+dir=$PREFIX/etc/apt/sources.list.d
+[ ! -d $dir ] && mkdir -p $dir
+wget https://raw.githubusercontent.com/ivam3/termux-packages/gh-pages/ivam3-termux-packages.list -O $dir/ivam3-termux-packages.list
 apt update && apt update -y
 apt install metasploit-framework -y
 
